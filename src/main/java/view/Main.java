@@ -33,7 +33,10 @@ public class Main
     // Metodo de set-up
     public static void main(String[] args) 
     {
-        get("/hello", (req, res) -> "Hello World");
+        port(Integer.valueOf(System.getenv("PORT")));
+        staticFileLocation("/public");
+        
+        get("/", (req, res) -> "Hello World");
         Reporte reporte = new Reporte();        
     }   
 }
