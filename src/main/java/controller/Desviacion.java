@@ -11,8 +11,8 @@ import java.util.LinkedList;
 
 public final class Desviacion 
 {
-    // Metodo constructor
-    public Desviacion(LinkedList lista_a, LinkedList lista_b, Double estimated_LOC)
+    // Metodo  para obtener la desviacion estandar a partir de unas listas y el estimado de LOC
+    public void obtenerDesviacion(LinkedList lista_a, LinkedList lista_b, Double estimated_LOC)
     {
         Double tamano_lista = (double) lista_a.size();
         
