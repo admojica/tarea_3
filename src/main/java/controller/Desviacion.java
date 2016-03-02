@@ -46,8 +46,7 @@ public final class Desviacion
         Double beta_0 = (sumatoria_b / tamano_lista) - (beta_1 * sumatoria_a/tamano_lista);
         
         // Yk
-        Double Yk = beta_0 + (beta_1 * estimated_LOC);
-        
+        Double Yk = beta_0 + (beta_1 * estimated_LOC);        
         DecimalFormat formato = new DecimalFormat("##0.0000");
         
         resultado_desviacion = "<tr><td>" + formato.format(beta_0) + "</td><td>" + formato.format(beta_1) + "</td><td>" + formato.format(rxy) + "</td><td>" + formato.format(r_cuadrado) + "</td><td>" + formato.format(Yk) + "</td></tr>";

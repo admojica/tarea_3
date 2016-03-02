@@ -13,6 +13,7 @@ public class Reporte
 {
     String reporte;
     
+    // Metodo constructor del reporte
     public Reporte()
     {
         AbrirDatos abrir_datos = new AbrirDatos();

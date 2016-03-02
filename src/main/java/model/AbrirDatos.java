@@ -32,7 +32,7 @@ public class AbrirDatos
             // Leer el archivo linea por linea
             while ((strLinea = buffer.readLine()) != null)   
             {
-                // Imprimimos la línea por pantalla
+                // Se imprime la línea por pantalla
                 lista.add(Double.parseDouble(strLinea));
             }
             // Se cierra el archivo
