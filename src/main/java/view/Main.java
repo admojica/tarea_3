@@ -12,7 +12,7 @@ import static spark.Spark.get;
 
 public class Main 
 {
-    // Metodo de set-up del programa
+    /* Metodo de set-up del programa */
     public static void main(String[] args)
     {
       port(Integer.valueOf(System.getenv("PORT")));

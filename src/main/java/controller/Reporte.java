@@ -13,7 +13,7 @@ public class Reporte
 {
     String reporte;
     
-    // Metodo constructor del reporte
+    /* Metodo constructor del reporte */
     public Reporte()
     {
         AbrirDatos abrir_datos = new AbrirDatos();
@@ -27,21 +27,17 @@ public class Reporte
         
         Desviacion desviacion_1 = new Desviacion();
         desviacion_1.obtenerDesviacion(estimated, actual_added, 386.0);
-        Desviacion desviacion_2 = new Desviacion();
-        desviacion_2.obtenerDesviacion(estimated, actual_development, 386.0);
-        Desviacion desviacion_3 = new Desviacion();
-        desviacion_3.obtenerDesviacion(plan_added, actual_added, 386.0);
-        Desviacion desviacion_4 = new Desviacion();
-        desviacion_4.obtenerDesviacion(plan_added, actual_development, 386.0);
-        
         reporte += desviacion_1.getDesviacion();
-        reporte += desviacion_2.getDesviacion();
-        reporte += desviacion_3.getDesviacion();
-        reporte += desviacion_4.getDesviacion();
+        desviacion_1.obtenerDesviacion(estimated, actual_development, 386.0);
+        reporte += desviacion_1.getDesviacion();
+        desviacion_1.obtenerDesviacion(plan_added, actual_added, 386.0);
+        reporte += desviacion_1.getDesviacion();
+        desviacion_1.obtenerDesviacion(plan_added, actual_development, 386.0);
+        reporte += desviacion_1.getDesviacion();
         reporte += "</table>";
     }
     
-    // Metodo para retornar el resultado del reporte
+    /* Metodo para retornar el resultado del reporte */
     public String getReporte()
     {
         return this.reporte;

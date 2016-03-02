@@ -13,7 +13,7 @@ public final class Desviacion
 {
     String resultado_desviacion;
     
-    // Metodo  para obtener la desviacion estandar a partir de unas listas y el estimado de LOC
+    /* Metodo  para obtener la desviacion estandar a partir de unas listas y el estimado de LOC */
     public void obtenerDesviacion(LinkedList lista_a, LinkedList lista_b, Double estimated_LOC)
     {
         Double tamano_lista = (double) lista_a.size();
@@ -52,13 +52,13 @@ public final class Desviacion
         resultado_desviacion = "<tr><td>" + formato.format(beta_0) + "</td><td>" + formato.format(beta_1) + "</td><td>" + formato.format(rxy) + "</td><td>" + formato.format(r_cuadrado) + "</td><td>" + formato.format(Yk) + "</td></tr>";
     }
     
-    // Metodo que retorna el resultado de la desviacion
+    /* Metodo que retorna el resultado de la desviacion */
     public String getDesviacion()
     {
         return this.resultado_desviacion;
     }
     
-    // Metodo para obtener la potencia al cuadrado
+    /* Metodo para obtener la potencia al cuadrado */
     public LinkedList potenciaCuadrado(LinkedList lista)
     {
         LinkedList lista_cuadrado = new LinkedList();
@@ -69,7 +69,7 @@ public final class Desviacion
         return lista_cuadrado;
     }
     
-    // Metodo para obtener la multiplicación de los dos factores de la desviación estándar
+    /* Metodo para obtener la multiplicación de los dos factores de la desviación estándar */
     public LinkedList multiplicacion(LinkedList lista_a, LinkedList lista_b)
     {
         LinkedList lista_multiplicada = new LinkedList();
@@ -80,7 +80,7 @@ public final class Desviacion
         return lista_multiplicada;
     }
     
-    // Metodo para sumar la lista
+    /* Metodo para sumar la lista */
     public Double sumatoria(LinkedList lista)
     {
         Double suma = 0.0;
